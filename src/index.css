@@ -22,9 +22,10 @@ body {
 }
 
 h1 {
-  text-align: center;
-  color: white;
   font-family: 'lazer84';
+  text-align: center;
+  color: turquoise;
+  font-size: 5rem;
 }
 
 ul {

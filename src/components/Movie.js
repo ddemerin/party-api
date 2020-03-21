@@ -34,6 +34,8 @@ export class Movie extends Component {
               </section>
               <section className="movie-text">
                 <h2>{movie.title}</h2>
+                <h3>Release Date</h3>
+                <p>{movie.release_date}</p>
                 <h3>Overview</h3>
                 <p>{movie.overview}</p>
               </section>
