@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { format } from 'date-fns'
 
 export class Movie extends Component {
   state = {
@@ -14,7 +15,9 @@ export class Movie extends Component {
         return response.json()
       })
       .then(movie => {
-        console.log(movie)
+        movie.results.sort(
+          (a, b) => Date.parse(a.release_date) - Date.parse(b.release_date)
+        )
         this.setState({
           movieList: movie.results,
         })
