@@ -38,7 +38,7 @@ export class Movie extends Component {
                 />
               </section>
               <section className="movie-text">
-                <h2>{this.props.title}</h2>
+                <h2>{movie.title}</h2>
                 <h3>Release Date</h3>
                 <p>{format(new Date(movie.release_date), 'MMMM do yyyy')}</p>
                 <h3>Overview</h3>
