@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Movie from './components/Movie'
-import { format } from 'date-fns'
 
 export class App extends Component {
   render() {

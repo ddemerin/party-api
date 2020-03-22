@@ -11,13 +11,15 @@ export class Movie extends Component {
       'https://api.themoviedb.org/3/discover/movie?primary_release_year=1989&sort_by=popularity.desc&api_key=a2a82544ba0aad2945926880c754faab'
     )
       .then(response => {
-        console.log(response)
+        // console.log(response)
         return response.json()
       })
       .then(movie => {
+        // console.log(movie)
         movie.results.sort(
           (a, b) => Date.parse(a.release_date) - Date.parse(b.release_date)
         )
+        // console.log(movie)
         this.setState({
           movieList: movie.results,
         })
@@ -36,9 +38,9 @@ export class Movie extends Component {
                 />
               </section>
               <section className="movie-text">
-                <h2>{movie.title}</h2>
+                <h2>{this.props.title}</h2>
                 <h3>Release Date</h3>
-                <p>{movie.release_date}</p>
+                <p>{format(new Date(movie.release_date), 'MMMM do yyyy')}</p>
                 <h3>Overview</h3>
                 <p>{movie.overview}</p>
               </section>
